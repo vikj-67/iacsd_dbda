@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mv /home/dbda/viki/source/*.txt /home/dbda/viki/destination
+cp /home/dbda/viki/source/*.txt /home/dbda/viki/destination
