@@ -1,0 +1,41 @@
+1. Retrieve the details (Name, Salary and dept no) of the emp who are working in
+department code 20, 30 and 40.
+select ename, sal, deptno from emp
+where deptno in (20,30,40);
+
+2. Display the total salary of all employees. Total salary will be calculated as sal+comm+sal*0.10
+select sal+nvl(comm,0)+sal*0.1 "Total Salary" from emp;
+
+3. List the Name and job of the emp who have joined before 1 jan 1986 and whose salary range is between 1200and 2500.
+select * from emp
+where hiredate<'01-JAN-86' and sal between 1200 and 2500;
+
+4. List the empno, name, and department number of the emp works under manager with id 7698
+select empno, ename, deptno from emp
+where mgr=7698;
+
+5. List the name, job, and salary of the emp who are working in departments 10 and 30.
+select ename, job, sal from emp
+where deptno in (10,30);
+
+6. Display name concatenated with dept code separated by comma and space. Name the column as ‘Emp info’.
+
+7. Display the emp details who do not have manager.
+select * from emp
+where mgr is null;
+
+8. Write a query which will display name, department no and date of joining of all
+employee who were joined January 1, 1981 and March 31, 1983. Sort it based on date of
+joining (ascending).
+select ename, deptno, hiredate from emp
+where hiredate between '01-JAN-81' and '31-MAR-83'
+order by hiredate asc;
+
+9. Display the employee details where the job contains word ‘AGE’ anywhere in the Job
+select * from emp
+where job like '%AGE%';
+
+11. List the details of the employee , whose names start with ‘A’ and end with ‘S’ or
+whose names contains N as the second or third character, and ending with either ‘N’ or ‘S’.
+select * from emp
+where ename like 'A%S'or ename like '__N%N' or ename like '__N%S';
